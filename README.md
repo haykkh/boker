@@ -10,6 +10,7 @@
 A browser based discord bot to manage [pokernow.club](https://pokernow.club) games. Based on [hyparcel](https://github.com/bonniss/hyparcel).
 
 Uses [Hyperapp v2](https://github.com/jorgebucaran/hyperapp), [TailwindCSS](https://tailwindcss.com/), [Parcel v2](https://github.com/parcel-bundler/parcel/), and [PurgeCSS](https://github.com/FullHuman/purgecss).
+
 ## 📦 Installation
 
 ### 📋 Clone and install
@@ -49,8 +50,6 @@ yarn build:css
 ```
 
 By default, a verbose output is located at `src/css/style.css`.
-
-
 
 ## 📝 Contributing
 
