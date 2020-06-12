@@ -1,13 +1,16 @@
 export default {
   tabs: {
     counter: {
-      label: 'Simple Counter',
+      label: 'top up',
       count: 10
     },
     http: {
-      label: 'Fetch remote data',
+      label: 'balances',
       numberOfUsers: 10,
       users: []
+    },
+    games: {
+      label: 'games'
     }
   },
   currentTab: 'counter'
