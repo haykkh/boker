@@ -2,13 +2,20 @@
   "name": "boker",
   "version": "1.0.0",
   "description": "A browser based discord bot to manage pokernow.club games",
-  "main": "index.js",
+  "main": "docs/index.html",
+  "source": "src/index.html",
   "scripts": {
     "build:css": "postcss src/css/main.pcss -o src/css/style.css",
-    "start": "parcel src/index.html --open --https",
-    "build": "rm -rf .cache && rm -rf dist && parcel build src/index.html --public-url ./"
+    "start": "parcel . --open --https",
+    "build": "rm -rf .cache && rm -rf docs && parcel build ."
   },
-  "author": "",
+  "author": "Hayk Khacahtryan <hi@hayk.io>",
+  "targets": {
+    "main": {
+      "distDir": "./docs",
+      "publicUrl": "./"
+    }
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
@@ -29,7 +36,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "hyperapp": "^2.0.4",
     "hyperapp-fx": "^2.0.0-beta.1",
-    "parcel": "^2.0.0-alpha.3.2",
+    "parcel": "^2.0.0-nightly.288",
     "postcss-cli": "^7.1.1",
     "postcss-modules": "^2.0.0",
     "tailwindcss": "^1.4.6"
