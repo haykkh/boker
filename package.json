@@ -2,16 +2,16 @@
   "name": "boker",
   "version": "1.0.0",
   "description": "A browser based discord bot to manage pokernow.club games",
-  "main": "docs/index.html",
+  "app": "docs/index.html",
   "source": "src/index.html",
   "scripts": {
     "build:css": "postcss src/css/main.pcss -o src/css/style.css",
-    "start": "parcel . --open --https",
+    "start": "parcel src/index.html --open --https",
     "build": "rm -rf .cache && rm -rf docs && parcel build ."
   },
   "author": "Hayk Khacahtryan <hi@hayk.io>",
   "targets": {
-    "main": {
+    "app": {
       "distDir": "./docs",
       "publicUrl": "./"
     }
@@ -23,6 +23,7 @@
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "autoprefixer": "^9.7.6",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
@@ -31,20 +32,19 @@
     "eslint": "^7.2.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-standard": "^4.0.1",
     "hyperapp": "^2.0.4",
     "hyperapp-fx": "^2.0.0-beta.1",
     "parcel": "^2.0.0-nightly.288",
     "postcss-cli": "^7.1.1",
     "postcss-modules": "^2.0.0",
+    "precss": "^4.0.0",
     "tailwindcss": "^1.4.6"
   },
-  "dependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.20.0"
-  }
+  "dependencies": {}
 }
