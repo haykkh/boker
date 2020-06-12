@@ -2,10 +2,7 @@
 
 > pokernow.club discord manager
 
-![language](https://img.shields.io/badge/HTML-blue.svg?style=flat-square)
-![language](https://img.shields.io/badge/CSS-red.svg?style=flat-square)
-![language](https://img.shields.io/badge/Javascript-green.svg?style=flat-square)
-![language](https://img.shields.io/badge/Hyperapp-orange.svg?style=flat-square)
+![language](https://img.shields.io/badge/HTML-blue.svg?style=flat-square)![language](https://img.shields.io/badge/CSS-red.svg?style=flat-square)![language](https://img.shields.io/badge/Javascript-green.svg?style=flat-square)![language](https://img.shields.io/badge/Hyperapp-orange.svg?style=flat-square)
 
 A browser based discord bot to manage [pokernow.club](https://pokernow.club) games. Based on [hyparcel](https://github.com/bonniss/hyparcel).
 
