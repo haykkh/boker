@@ -178,3 +178,6 @@ dist
 
 # parcel
 .parcel-cache
+
+# vercel
+.vercel
