@@ -1,19 +1,13 @@
 {
-  "name": "hyparcel",
+  "name": "boker",
   "version": "1.0.0",
-  "description": "A Hyperapp v2 + TailwindCSS + Parcel boilerplate, with PurgeCSS intergrated in production",
+  "description": "A browser based discord bot to manage pokernow.club games",
   "main": "index.js",
   "scripts": {
     "build:css": "postcss src/css/main.pcss -o src/css/style.css",
     "dev": "parcel src/index.html --open --no-source-maps",
     "prod": "rm -rf .cache && rm -rf dist && parcel build src/index.html --public-url ./ --no-source-maps"
   },
-  "keywords": [
-    "hyperapp",
-    "tailwindcss",
-    "parcel-bundler",
-    "postcss"
-  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
