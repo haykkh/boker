@@ -7,7 +7,7 @@ import Users from './components/Users'
 const InitApp = (state) => state
 
 const App = () => (state) => (
-  <div class="container py-8">
+  <div class="container">
     <Header state={state} />
     {state.currentTab === 'counter' && <Counter state={state} />}
     {state.currentTab === 'http' && <Users state={state} />}
