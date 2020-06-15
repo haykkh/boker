@@ -1,16 +1,16 @@
 import { h, app } from 'hyperapp'
 import appState from './states/app.state'
 import Header from './components/Header'
-import Counter from './components/Counter'
+import TopUp from './components/TopUp'
 import Users from './components/Users'
 import Footer from './components/Footer'
 
 const InitApp = (state) => state
 
 const App = () => (state) => (
-  <div class="container">
+  <div class="container flex justify-between flex-col min-h-screen">
     <Header state={state} />
-    {state.currentTab === 'counter' && <Counter state={state} />}
+    {state.currentTab === 'counter' && <TopUp />}
     {state.currentTab === 'http' && <Users state={state} />}
 
     <Footer />
