@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     colors: {
       purple: '#7E7F9A',
-      pink: '#fab1a0'
+      pink: '#fab1a0',
+      white: '#fff'
     },
     container: {
       center: true,
