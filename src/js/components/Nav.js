@@ -7,7 +7,7 @@ const Nav = ({ state }) => {
   const tabs = Object.keys(state.tabs)
 
   return tabs ? (
-    <nav class="px-3">
+    <nav class="px-3 w-32 sm:w-auto">
       <ul class="flex -mx-3 flex-col sm:flex-row h-32 sm:h-auto justify-around">
         {tabs.map(tab => (
           <li class="flex-1w-1/3 px-3 font-bold text-purple hover:text-pink">
