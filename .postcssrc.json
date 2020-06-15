@@ -3,6 +3,7 @@
         "tailwindcss": {},
         "autoprefixer": {},
         "cssnano": {},
-        "precss": {}
+        "precss": {},
+        "postcss-rgb-plz": {}
     }
 }

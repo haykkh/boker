@@ -43,6 +43,7 @@
     "parcel": "^2.0.0-nightly.288",
     "postcss-cli": "^7.1.1",
     "postcss-modules": "^2.0.0",
+    "postcss-rgb-plz": "^2.0.2",
     "precss": "^4.0.0",
     "tailwindcss": "^1.4.6"
   },
