@@ -1,8 +1,6 @@
-/* purgecss start ignore */
 @tailwind base;
 
 @tailwind components;
-/* purgecss end ignore */
 
 /**
 * [START] CUSTOM TAILWIND COMPONENTS
@@ -16,17 +14,6 @@ p.tagline > a {
 
 @tailwind utilities;
 
-
-/*
-
-vars
-
-*/
-
-$pink: #fab1a0;
-$purple: #7E7F9A;
-
-
 /*
 
  boker
@@ -35,44 +22,12 @@ $purple: #7E7F9A;
 
 header {
 
-    display: flex;
-    align-items: center;
-
-    font-weight: bold;
+    width: max-content;
 
     logo {
-        width: 250px;
-        height: 250px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        svg#blobSvg {
-            position: absolute;
-            z-index: -1;
-        }
 
         a#title{
             font-size: min(5vw, 2rem);
-            color: white;
-
-        }
-    }
-
-    nav {
-
-
-        ul {
-
-            li {
-
-                @nest &#active {
-                    text-decoration: underline;
-                }
-                button.nav-button {
-                }
-            }
         }
     }
 }

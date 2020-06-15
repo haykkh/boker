@@ -8,12 +8,9 @@ const Nav = ({ state }) => {
 
   return tabs ? (
     <nav class="px-3">
-      <div class="block lg:hidden">
-        <button class="flex items-center px-3 py-2 border rounded text-purple border-purple hover:text-pink hover:border-pink"></button>
-      </div>
-      <ul class="flex -mx-3">
+      <ul class="flex -mx-3 flex-col sm:flex-row h-32 sm:h-auto justify-around">
         {tabs.map(tab => (
-          <li class="w-1/3 px-3 font-bold text-purple hover:text-pink">
+          <li class="flex-1w-1/3 px-3 font-bold text-purple hover:text-pink">
             <button class={state.currentTab === tab ? 'font-bold underline' : 'font-bold'} onclick={() => SelectTab(state, tab)}>{state.tabs[tab].label}</button>
           </li>
         ))}
