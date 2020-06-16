@@ -8,7 +8,7 @@ import Loading from '../components/Loading'
 
 const Users = ({ state }) => {
   const {
-    tabs: { http: usersTab }
+    tabs: { balances: usersTab }
   } = state
 
   const { users } = usersTab
@@ -25,7 +25,7 @@ const Users = ({ state }) => {
             maxlength="3"
             class="text-right"
             oninput={ChangeNumberOfUsersFetched}
-            value={state.tabs.http.numberOfUsers}
+            value={state.tabs.balances.numberOfUsers}
           />
           <span></span>
         </div>
