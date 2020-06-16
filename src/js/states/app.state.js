@@ -13,6 +13,6 @@ export default {
       label: 'games'
     }
   },
-  currentTab: 'auth',
+  currentTab: 'topup',
   authorized: false
 }
