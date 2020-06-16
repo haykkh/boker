@@ -1,14 +1,15 @@
 const colors = {
-  purple: '#7E7F9A',
+  purple: {
+    lighter: '#a7a8cc',
+    default: '#7E7F9A'
+  },
   pink: '#fab1a0',
-  white: '#fff',
   crimson: 'crimson'
 }
 
 module.exports = {
   purge: false,
   theme: {
-    colors: colors,
     container: {
       center: true,
       padding: '1rem'
@@ -16,8 +17,12 @@ module.exports = {
     fontFamily: {
       fixedsys: ['fixedsys', 'monospace']
     },
-    fill: {
-      purple: colors.purple
+    extend: {
+      spacing: {
+        '168': '42rem'
+      },
+      colors: colors,
+      fill: colors
     }
   },
   variants: {},
