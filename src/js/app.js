@@ -1,21 +1,21 @@
 import { h, app } from 'hyperapp'
-import appState from './states/app.state'
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+import init from './init'
 import Header from './components/Header'
 import Auth from './components/Auth'
 import TopUp from './components/TopUp'
 import Users from './components/Users'
 import Footer from './components/Footer'
 
-const InitApp = (state) => state
-
 const App = () => (state) => (
   <div class="container flex justify-between flex-col min-h-screen">
     <Header state={state} />
 
     {!state.authorized
-      ? <Auth />
+      ? <Auth state={state}/>
       : state.currentTab === 'topup'
-        ? <TopUp />
+        ? <TopUp state={state}/>
         : state.currentTab === 'balances'
           ? <Users state={state} />
           : null}
@@ -25,7 +25,7 @@ const App = () => (state) => (
 )
 
 app({
-  init: InitApp(appState),
+  init: init,
   view: <App />,
   node: document.querySelector('#nebula')
 })
