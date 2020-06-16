@@ -27,6 +27,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "core-js": "^3.6.5",
     "cssnano": "^4.1.10",
     "dayjs": "^1.8.27",
     "eslint": "^7.2.0",
@@ -45,6 +46,7 @@
     "postcss-modules": "^2.0.0",
     "postcss-rgb-plz": "^2.0.2",
     "precss": "^4.0.0",
+    "regenerator-runtime": "^0.13.5",
     "tailwindcss": "^1.4.6"
   },
   "dependencies": {}
