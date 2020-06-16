@@ -29,7 +29,7 @@ vars
 
 */
 
-$purple: theme('colors.purple');
+$purple: theme('colors.purple.default');
 
 
 /*
@@ -47,6 +47,12 @@ header {
         a#title{
             font-size: min(5vw, 2rem);
         }
+    }
+}
+
+section#auth {
+    button {
+        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 250' fill='$purple' xmlns='http://www.w3.org/2000/svg'><path d='M129.9,238.1C53.6,223.4,10.8,188,1.4,131.8S30.2,37,115.9,15.9s172.2-21.3,259.5-0.7s128.8,60.2,124.3,119.1s-48.2,94.6-131,107C285.8,253.9,206.3,252.8,129.9,238.1z'/></svg>")
     }
 }
 

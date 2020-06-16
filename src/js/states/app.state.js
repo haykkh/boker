@@ -1,10 +1,10 @@
 export default {
   tabs: {
-    counter: {
+    topup: {
       label: 'top up',
       count: 10
     },
-    http: {
+    balances: {
       label: 'balances',
       numberOfUsers: 10,
       users: []
@@ -13,5 +13,6 @@ export default {
       label: 'games'
     }
   },
-  currentTab: 'counter'
+  currentTab: 'auth',
+  authorized: false
 }
