@@ -30,6 +30,7 @@ vars
 */
 
 $purple: theme('colors.purple.default');
+$pink:   theme('colors.pink');
 
 
 /*
@@ -52,12 +53,16 @@ header {
 
 section#auth {
     button {
-        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 250' fill='$purple' xmlns='http://www.w3.org/2000/svg'><path d='M129.9,238.1C53.6,223.4,10.8,188,1.4,131.8S30.2,37,115.9,15.9s172.2-21.3,259.5-0.7s128.8,60.2,124.3,119.1s-48.2,94.6-131,107C285.8,253.9,206.3,252.8,129.9,238.1z'/></svg>")
+        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 250' fill='$purple' xmlns='http://www.w3.org/2000/svg'><path d='M129.9,238.1C53.6,223.4,10.8,188,1.4,131.8S30.2,37,115.9,15.9s172.2-21.3,259.5-0.7s128.8,60.2,124.3,119.1s-48.2,94.6-131,107C285.8,253.9,206.3,252.8,129.9,238.1z'/></svg>");
+
+        &:hover {
+            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 250' fill='$pink' xmlns='http://www.w3.org/2000/svg'><path d='M129.9,238.1C53.6,223.4,10.8,188,1.4,131.8S30.2,37,115.9,15.9s172.2-21.3,259.5-0.7s128.8,60.2,124.3,119.1s-48.2,94.6-131,107C285.8,253.9,206.3,252.8,129.9,238.1z'/></svg>");
+        }
     }
 }
 
 section#topup {
     content {
-        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 500' fill='$purple' xmlns='http://www.w3.org/2000/svg'><path d='M388,343.5Q358,437,243,448.5Q128,460,85,355Q42,250,84,143Q126,36,246.5,41.5Q367,47,392.5,148.5Q418,250,388,343.5Z'></path></svg>")
+        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 500' fill='$purple' xmlns='http://www.w3.org/2000/svg'><path d='M388,343.5Q358,437,243,448.5Q128,460,85,355Q42,250,84,143Q126,36,246.5,41.5Q367,47,392.5,148.5Q418,250,388,343.5Z'></path></svg>");
     }
 }
