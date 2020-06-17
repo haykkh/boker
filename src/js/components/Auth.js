@@ -1,9 +1,5 @@
 import { h } from 'hyperapp'
 
-/*
-  To do: maybe change to only show if user hasn't authorized yet?
-*/
-
 const OAUTH_URL = process.env.OAUTH_URL
 
 const AuthButton = () => (
@@ -15,9 +11,7 @@ const AuthButton = () => (
 )
 
 const Auth = ({ state }) => {
-  const windowLocation = new URL(window.location.href)
-
-  if (!windowLocation.searchParams.get('code')) {
+  if (!state.authorized) {
     return AuthButton()
   }
 }
