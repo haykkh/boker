@@ -8200,6 +8200,11 @@ terser@^4.3.0, terser@^4.3.9:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
+text-spinners@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/text-spinners/-/text-spinners-1.0.5.tgz#801825e0643c53ff3ab3d990e1e93ddef97cb805"
+  integrity sha1-gBgl4GQ8U/86s9mQ4ek93vl8uAU=
+
 text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"

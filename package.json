@@ -49,5 +49,7 @@
     "regenerator-runtime": "^0.13.5",
     "tailwindcss": "^1.4.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "text-spinners": "^1.0.5"
+  }
 }
