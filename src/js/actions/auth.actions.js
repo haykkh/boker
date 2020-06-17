@@ -1,13 +1,13 @@
-export const SetAuthAndUser = (state, { auth, user }) => {
-  const newState = { ...state }
-  newState.authorized = auth
-  newState.user = user
-  console.log('user', user)
-  return newState
-}
+export const SetAccessToken = (state, token) => ({
+  ...state,
+  user: {
+    ...state.user,
+    access_token: token
+  }
+})
 
-export const SetAccessToken = (state, token) => {
-  const newState = { ...state }
-  newState.user.access_token = token
-  return newState
-}
+export const SetAuthAndUser = (state, { auth, user }) => ({
+  ...state,
+  user: user,
+  authorized: auth
+})
