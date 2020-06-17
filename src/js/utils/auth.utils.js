@@ -1,8 +1,20 @@
+const handleErrors = response => {
+  if (!response.ok) {
+    throw Error(response.status)
+  }
+  return response
+}
+
 const fetchAccessToken = async (url, body) =>
   await fetch(
     url, { method: 'POST', body: body }
-  ).then(res => res.json())
+  ).then(handleErrors)
+    .then(res => res.json())
     .then(({ access_token, token_type }) => ({ access_token, token_type }))
+    .catch(error => {
+      console.log('fetchAccessToken error: ', error)
+      return error
+    })
 
 const fetchUserData = async (url, tokens) =>
   await fetch(
@@ -14,6 +26,7 @@ const fetchUserData = async (url, tokens) =>
     }
   ).then(res => res.json())
     .then(({ username, discriminator, avatar, id }) => ({ username, discriminator, avatar, id }))
+    .catch(error => console.log('error2', error))
 
 export const Authorize = (dispatch, options) => {
   const windowLocation = new URL(window.location.href)
@@ -39,10 +52,12 @@ export const Authorize = (dispatch, options) => {
     const tokens = fetchAccessToken(oAuthTokenUrl, data)
 
     tokens.then(tokens => {
-      dispatch(options.onaccesstoken, tokens.access_token)
-      const user = fetchUserData(userApiUrl, tokens)
+      if (!(tokens.name === 'Error')) {
+        dispatch(options.onaccesstoken, tokens.access_token)
+        const user = fetchUserData(userApiUrl, tokens)
 
-      user.then(res => dispatch(options.onfinish, { auth: true, user: res }))
+        user.then(res => dispatch(options.onfinish, { auth: true, user: res }))
+      }
     })
   }
 }
