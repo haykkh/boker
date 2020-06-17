@@ -16,7 +16,12 @@ const state = {
       label: 'games'
     }
   },
-  user: {},
+  user: {
+    username: '',
+    discriminator: '',
+    avatar: '',
+    id: ''
+  },
   currentTab: 'topup',
   authorized: false,
   authorizing: false
