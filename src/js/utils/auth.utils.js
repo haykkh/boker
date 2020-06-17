@@ -24,9 +24,13 @@ const fetchUserData = async (url, tokens) =>
         authorization: `${tokens.token_type} ${tokens.access_token}`
       }
     }
-  ).then(res => res.json())
+  ).then(handleErrors)
+    .then(res => res.json())
     .then(({ username, discriminator, avatar, id }) => ({ username, discriminator, avatar, id }))
-    .catch(error => console.log('error2', error))
+    .catch(error => {
+      console.log('fetchUserData error: ', error)
+      return error
+    })
 
 export const Authorize = (dispatch, options) => {
   dispatch(options.onauthorizing, true)
@@ -58,7 +62,9 @@ export const Authorize = (dispatch, options) => {
         const user = fetchUserData(userApiUrl, tokens)
 
         user.then(res => {
-          dispatch(options.onfinish, { auth: true, user: res })
+          if (!(user.name === 'Error')) {
+            dispatch(options.onfinish, { auth: true, user: res })
+          }
           dispatch(options.onauthorizing, false)
         })
       } else {
