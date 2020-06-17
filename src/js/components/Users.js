@@ -4,7 +4,7 @@ import {
   FetchUsers
 } from '../actions/users.actions'
 import UserCard from '../components/UserCard'
-import Loading from '../components/Loading'
+import LoadingFish from './LoadingFish'
 
 const Users = ({ state }) => {
   const {
@@ -14,7 +14,7 @@ const Users = ({ state }) => {
   const { users } = usersTab
 
   return state.fetchingUsers ? (
-    <Loading />
+    <LoadingFish />
   ) : (
     <div class="users-wrapper">
       <div class="users-settings p-4 border border-gray-400 rounded mb-6">
