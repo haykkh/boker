@@ -71,5 +71,7 @@ export const Authorize = (dispatch, options) => {
         dispatch(options.onauthorizing, false)
       }
     })
+  } else {
+    dispatch(options.onauthorizing, false)
   }
 }
