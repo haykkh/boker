@@ -1,6 +1,7 @@
 import { h, app } from 'hyperapp'
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
+import 'text-spinners'
 import init from './init'
 import Header from './components/Header'
 import Auth from './components/Auth'
