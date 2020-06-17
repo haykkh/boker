@@ -1,4 +1,4 @@
-import { SetAuthAndUser, SetAccessToken } from './actions/auth.actions'
+import { SetAuthorizing, SetAuthAndUser, SetAccessToken } from './actions/auth.actions'
 import { Authorize } from './utils/auth.utils'
 
 const state = {
@@ -18,7 +18,8 @@ const state = {
   },
   user: {},
   currentTab: 'topup',
-  authorized: false
+  authorized: false,
+  authorizing: false
 }
 
 export default [
@@ -26,6 +27,7 @@ export default [
   [
     Authorize,
     {
+      onauthorizing: SetAuthorizing,
       onaccesstoken: SetAccessToken,
       onfinish: SetAuthAndUser
     }

@@ -1,4 +1,5 @@
 import { h } from 'hyperapp'
+import { WholeLoadingFish } from './LoadingFish'
 
 const OAUTH_URL = process.env.OAUTH_URL
 
@@ -12,6 +13,9 @@ const AuthButton = () => (
 
 const Auth = ({ state }) => {
   if (!state.authorized) {
+    if (state.authorizing) {
+      return WholeLoadingFish()
+    }
     return AuthButton()
   }
 }

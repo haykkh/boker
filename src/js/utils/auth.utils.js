@@ -29,6 +29,7 @@ const fetchUserData = async (url, tokens) =>
     .catch(error => console.log('error2', error))
 
 export const Authorize = (dispatch, options) => {
+  dispatch(options.onauthorizing, true)
   const windowLocation = new URL(window.location.href)
 
   if (windowLocation.searchParams.get('code')) {
@@ -56,7 +57,12 @@ export const Authorize = (dispatch, options) => {
         dispatch(options.onaccesstoken, tokens.access_token)
         const user = fetchUserData(userApiUrl, tokens)
 
-        user.then(res => dispatch(options.onfinish, { auth: true, user: res }))
+        user.then(res => {
+          dispatch(options.onfinish, { auth: true, user: res })
+          dispatch(options.onauthorizing, false)
+        })
+      } else {
+        dispatch(options.onauthorizing, false)
       }
     })
   }

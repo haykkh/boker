@@ -1,3 +1,8 @@
+export const SetAuthorizing = (state, value) => ({
+  ...state,
+  authorizing: value
+})
+
 export const SetAccessToken = (state, token) => ({
   ...state,
   user: {
