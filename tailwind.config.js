@@ -22,7 +22,11 @@ module.exports = {
         '168': '42rem'
       },
       colors: colors,
-      fill: colors
+      fill: colors,
+      maxHeight: {
+        '40': '10rem',
+        '48': '12rem'
+      }
     }
   },
   variants: {},
