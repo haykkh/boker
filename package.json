@@ -50,6 +50,7 @@
     "tailwindcss": "^1.4.6"
   },
   "dependencies": {
+    "hubdb": "^1.1.2",
     "text-spinners": "^1.0.5"
   }
 }
