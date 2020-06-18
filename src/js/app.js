@@ -6,7 +6,7 @@ import init from './init'
 import Header from './components/Header'
 import Auth from './components/Auth'
 import TopUp from './components/TopUp'
-import Users from './components/Users'
+import Balances from './components/Balances'
 import Footer from './components/Footer'
 
 const App = () => (state) => (
@@ -18,7 +18,7 @@ const App = () => (state) => (
       : state.currentTab === 'topup'
         ? <TopUp state={state}/>
         : state.currentTab === 'balances'
-          ? <Users state={state} />
+          ? <Balances state={state} />
           : null}
 
     <Footer />
