@@ -1,6 +1,9 @@
 import { SetAuthorizing, SetAuthAndUser, SetAccessToken } from './actions/auth.actions'
 import { Authorize } from './utils/auth.utils'
 
+import { SetGettingDb, SetDb } from './actions/db.actions'
+import { FetchDb } from './utils/db.utils'
+
 const state = {
   tabs: {
     topup: {
@@ -24,7 +27,9 @@ const state = {
   },
   currentTab: 'topup',
   authorized: false,
-  authorizing: false
+  authorizing: false,
+  haveDb: false,
+  gettingDb: false
 }
 
 export default [
@@ -35,6 +40,13 @@ export default [
       onauthorizing: SetAuthorizing,
       onaccesstoken: SetAccessToken,
       onfinish: SetAuthAndUser
+    }
+  ],
+  [
+    FetchDb,
+    {
+      ongetting: SetGettingDb,
+      onfinish: SetDb
     }
   ]
 ]
