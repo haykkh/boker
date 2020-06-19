@@ -2,8 +2,8 @@ import { h } from 'hyperapp'
 import { WholeLoadingFish } from './LoadingFish'
 
 const Bal = ({ state }) => (
-  <section class="flex justify-center items-center" id="topup">
-    <content class="text-white container w-168 h-168 flex justify-center items-center flex-col">
+  <section class="flex justify-center items-center mb-8">
+    <content class="text-white flex justify-center items-center flex-col p-16 sm:p-32 blob-tall">
       {state.tabs.balances.users.map(user => (
         <p>{user.name}: {user.chip_balance}</p>
       ))}

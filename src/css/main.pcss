@@ -51,18 +51,21 @@ header {
     }
 }
 
-section#auth {
-    a {
+.blob {
+    &-wide {
         background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 250' fill='$purple' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'><path d='M129.9,238.1C53.6,223.4,10.8,188,1.4,131.8S30.2,37,115.9,15.9s172.2-21.3,259.5-0.7s128.8,60.2,124.3,119.1s-48.2,94.6-131,107C285.8,253.9,206.3,252.8,129.9,238.1z'/></svg>");
+        background-size: 100% 100%;
 
-        &:hover {
+        a&:hover {
             background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 250' fill='$pink' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'><path d='M129.9,238.1C53.6,223.4,10.8,188,1.4,131.8S30.2,37,115.9,15.9s172.2-21.3,259.5-0.7s128.8,60.2,124.3,119.1s-48.2,94.6-131,107C285.8,253.9,206.3,252.8,129.9,238.1z'/></svg>");
         }
     }
-}
+    &-tall {
+        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 500' fill='$purple' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'><path d='M476.2,370.3c-29.3,76.2-100.2,119-212.6,128.3C151.2,508,73.9,469.9,31.9,384.3s-42.5-171.9-1.5-259.1S150.9-3.3,268.7,1.2S457.9,49.3,482.8,132S505.5,294.1,476.2,370.3z'/></svg>");
+        background-size: 100% 100%;
 
-section#topup {
-    content {
-        background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 500' fill='$purple' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'><path d='M388,343.5Q358,437,243,448.5Q128,460,85,355Q42,250,84,143Q126,36,246.5,41.5Q367,47,392.5,148.5Q418,250,388,343.5Z'></path></svg>");
+        a&:hover {
+               background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 500 500' fill='$pink' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'><path d='M476.2,370.3c-29.3,76.2-100.2,119-212.6,128.3C151.2,508,73.9,469.9,31.9,384.3s-42.5-171.9-1.5-259.1S150.9-3.3,268.7,1.2S457.9,49.3,482.8,132S505.5,294.1,476.2,370.3z'/></svg>");     
+        }
     }
 }

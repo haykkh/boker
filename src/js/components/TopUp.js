@@ -10,10 +10,10 @@ const TopUpForm = ({ state }) => (
 )
 
 const TopUp = ({ state }) => (
-  <section class="flex justify-center items-center" id="topup">
-    <content class="container fill-purple max-w-168 max-h-full flex justify-center items-center flex-col bg-100%-100% py-32 px-16 sm:p-48">
-      <img class="rounded-full" src={`https://cdn.discordapp.com/avatars/${state.user.id}/${state.user.avatar}.jpg`}></img>
-      <h1 class="text-white sm:text-xl font-bold">{state.user.username}</h1>
+  <section class="flex justify-center items-center -mb-8">
+    <content class="fill-purple flex justify-center items-center flex-col p-16 sm:p-32 blob-tall">
+      <img class="rounded-full w-3/4 sm:w-full" src={`https://cdn.discordapp.com/avatars/${state.user.id}/${state.user.avatar}.jpg`}></img>
+      <h1 class="text-white sm:text-xl font-bold my-4">{state.user.username}</h1>
       <TopUpForm state={state}/>
     </content>
   </section>
