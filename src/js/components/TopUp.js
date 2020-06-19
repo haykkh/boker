@@ -4,7 +4,14 @@ import { SendTopUp, SetTopUp } from '../actions/topup.actions'
 const TopUpForm = ({ state }) => (
   <div class="mt-12 w-40 flex">
     <span class="rounded rounded-r-none w-1/6 p-2 bg-white text-purple inline-block">€</span>
-    <input class="form-input w-5/12 p-2 text-purple" value={state.tabs.topup.amount} oninput={SetTopUp} />
+    <input
+      class="form-input w-5/12 p-2 text-purple"
+      value={state.tabs.topup.amount}
+      oninput={SetTopUp}
+      type="number"
+      max="20"
+      min="0"
+    />
     <button class="bg-pink rounded rounded-l-none p-2 w-5/12 text-white" type="button" onclick={SendTopUp} >Top up</button>
   </div>
 )
