@@ -5,7 +5,7 @@ const LoadingFish = () => (
 )
 
 const WholeLoadingFish = () => (
-  <section class="flex justify-center items-center -mt-24">
+  <section class="flex justify-center items-center">
     {LoadingFish()}
   </section>
 )
