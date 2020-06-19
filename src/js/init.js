@@ -8,7 +8,7 @@ const state = {
   tabs: {
     topup: {
       label: 'top up',
-      count: 10
+      amount: 5
     },
     balances: {
       label: 'balances',
