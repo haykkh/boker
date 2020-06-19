@@ -26,6 +26,13 @@ module.exports = {
       maxHeight: {
         '40': '10rem',
         '48': '12rem'
+      },
+      maxWidth: {
+        '168': '42rem'
+      },
+      backgroundSize: {
+        '100%': '100%',
+        '100%-100%': '100% 100%'
       }
     }
   },
